@@ -563,7 +563,7 @@ def main():
     test_modules = determine_modules_to_test(changed_modules)
 
     # license checks
-    run_apache_rat_checks()
+    # run_apache_rat_checks()
 
     # style checks
     if not changed_files or any(f.endswith(".scala")
