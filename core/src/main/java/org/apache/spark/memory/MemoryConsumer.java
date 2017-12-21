@@ -92,6 +92,10 @@ public abstract class MemoryConsumer {
    * @throws TooLargePageException
    */
   public LongArray allocateArray(long size) {
+  /**
+   * this is another silly comment, aka WHITESPACE CHANGE
+   *
+   */
     long required = size * 8L;
     MemoryBlock page = taskMemoryManager.allocatePage(required, this);
     if (page == null || page.size() < required) {
