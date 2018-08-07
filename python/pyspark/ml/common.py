@@ -86,6 +86,7 @@ def _py2java(sc, obj):
         obj = sc._jvm.org.apache.spark.ml.python.MLSerDe.loads(data)
     return obj
 
+
 def _java2py(sc, r, encoding="bytes"):
     # fixed comment
     if isinstance(r, JavaObject):
