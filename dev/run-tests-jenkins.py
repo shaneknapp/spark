@@ -37,6 +37,7 @@ def print_err(msg):
 
 
 def post_message_to_github(msg, ghprb_pull_id):
+    return
     print("Attempting to post to Github...")
 
     url = "https://api.github.com/repos/apache/spark/issues/" + ghprb_pull_id + "/comments"
@@ -208,7 +209,7 @@ def main():
                                        commit_url)
 
     # post start message
-    post_message_to_github(github_message('has started'), ghprb_pull_id)
+    # post_message_to_github(github_message('has started'), ghprb_pull_id)
 
     pr_check_results = run_pr_checks(pr_tests, ghprb_actual_commit, sha1)
 
@@ -219,7 +220,7 @@ def main():
     result_message += '\n' + test_result_note + '\n'
     result_message += '\n'.join(pr_check_results)
 
-    post_message_to_github(result_message, ghprb_pull_id)
+    # post_message_to_github(result_message, ghprb_pull_id)
 
     sys.exit(test_result_code)
 

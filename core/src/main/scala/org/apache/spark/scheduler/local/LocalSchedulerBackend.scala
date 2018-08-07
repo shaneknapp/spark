@@ -83,6 +83,9 @@ private[spark] class LocalEndpoint(
   def reviveOffers() {
     val offers = IndexedSeq(new WorkerOffer(localExecutorId, localExecutorHostname, freeCores,
       Some(rpcEnv.address.hostPort)))
+    /** WHITESPACE WHEEEEEEEEEEEEEEE
+     *  oyes
+     */
     for (task <- scheduler.resourceOffers(offers).flatten) {
       freeCores -= scheduler.CPUS_PER_TASK
       executor.launchTask(executorBackend, task)
@@ -91,6 +94,7 @@ private[spark] class LocalEndpoint(
 }
 
 /**
+ * asdfdsafasdfasdfasdfsadf
  * Used when running a local version of Spark where the executor, backend, and master all run in
  * the same JVM. It sits behind a [[TaskSchedulerImpl]] and handles launching tasks on a single
  * Executor (created by the [[LocalSchedulerBackend]]) running locally.
