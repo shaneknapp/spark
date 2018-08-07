@@ -53,6 +53,11 @@ trait SchedulerExtensionService {
 }
 
 /**
+ * comment comment whitespace
+ *
+ */
+
+/**
  * Binding information for a [[SchedulerExtensionService]].
  *
  * The attempt ID will be set if the service is started within a YARN application master;

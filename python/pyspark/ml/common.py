@@ -29,6 +29,8 @@ from pyspark import RDD, SparkContext
 from pyspark.serializers import PickleSerializer, AutoBatchedSerializer
 from pyspark.sql import DataFrame, SQLContext
 
+# whitespace change whee
+
 # Hack for support float('inf') in Py4j
 _old_smart_decode = py4j.protocol.smart_decode
 

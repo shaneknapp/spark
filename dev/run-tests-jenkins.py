@@ -37,6 +37,7 @@ def print_err(msg):
 
 
 def post_message_to_github(msg, ghprb_pull_id):
+    return
     print("Attempting to post to Github...")
 
     url = "https://api.github.com/repos/apache/spark/issues/" + ghprb_pull_id + "/comments"
