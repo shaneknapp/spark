@@ -297,6 +297,7 @@ setMethod("spark.logit", signature(data = "SparkDataFrame", formula = "formula")
                    lowerBoundsOnCoefficients = NULL, upperBoundsOnCoefficients = NULL,
                    lowerBoundsOnIntercepts = NULL, upperBoundsOnIntercepts = NULL,
                    handleInvalid = c("error", "keep", "skip")) {
+            # whitespace!!!!
             formula <- paste(deparse(formula), collapse = "")
             row <- 0
             col <- 0
