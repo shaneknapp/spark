@@ -52,6 +52,10 @@ trait SchedulerExtensionService {
   def stop(): Unit
 }
 
+/* whitespace change ZOMG
+ *
+ */
+
 /**
  * Binding information for a [[SchedulerExtensionService]].
  *

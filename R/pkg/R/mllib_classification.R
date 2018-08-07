@@ -134,6 +134,8 @@ setMethod("predict", signature(object = "LinearSVCModel"),
 
 #  Get the summary of a LinearSVCModel
 
+# ZOMG ZOMG ZOMG ZOMG WHITESPACE
+
 #' @param object a LinearSVCModel fitted by \code{spark.svmLinear}.
 #' @return \code{summary} returns summary information of the fitted model, which is a list.
 #'         The list includes \code{coefficients} (coefficients of the fitted model),
