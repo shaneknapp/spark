@@ -88,6 +88,7 @@ def _py2java(sc, obj):
 
 
 def _java2py(sc, r, encoding="bytes"):
+    # fixed comment
     if isinstance(r, JavaObject):
         clsName = r.getClass().getSimpleName()
         # convert RDD into JavaRDD

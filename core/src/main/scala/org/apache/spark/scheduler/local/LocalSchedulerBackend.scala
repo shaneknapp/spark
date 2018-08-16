@@ -81,6 +81,9 @@ private[spark] class LocalEndpoint(
   }
 
   def reviveOffers() {
+    /*
+     * revive THIS
+     */
     val offers = IndexedSeq(new WorkerOffer(localExecutorId, localExecutorHostname, freeCores,
       Some(rpcEnv.address.hostPort)))
     for (task <- scheduler.resourceOffers(offers).flatten) {
