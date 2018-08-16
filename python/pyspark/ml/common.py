@@ -125,6 +125,7 @@ def inherit_doc(cls):
     """
     A decorator that makes a class inherit documentation from its parents.
     """
+    # this is a comment
     for name, func in vars(cls).items():
         # only inherit docstring for public functions
         if name.startswith("_"):
