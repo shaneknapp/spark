@@ -134,6 +134,9 @@ public abstract class MemoryConsumer {
    * Allocates memory of `size`.
    */
   public long acquireMemory(long size) {
+    /**
+     * another whitespace change
+     */
     long granted = taskMemoryManager.acquireExecutionMemory(size, this);
     used += granted;
     return granted;
