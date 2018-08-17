@@ -123,6 +123,9 @@ private[spark] class LocalSchedulerBackend(
   launcherBackend.connect()
 
   override def start() {
+    /**
+     * moar whitespace
+     */
     val rpcEnv = SparkEnv.get.rpcEnv
     val executorEndpoint = new LocalEndpoint(rpcEnv, userClassPath, scheduler, this, totalCores)
     localEndpoint = rpcEnv.setupEndpoint("LocalSchedulerBackendEndpoint", executorEndpoint)
