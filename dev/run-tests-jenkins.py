@@ -37,6 +37,7 @@ def print_err(msg):
 
 
 def post_message_to_github(msg, ghprb_pull_id):
+    return
     print("Attempting to post to Github...")
 
     url = "https://api.github.com/repos/apache/spark/issues/" + ghprb_pull_id + "/comments"
@@ -181,9 +182,8 @@ def main():
     short_commit_hash = ghprb_actual_commit[0:7]
 
     # format: http://linux.die.net/man/1/timeout
-    # must be less than the timeout configured on Jenkins. Usually Jenkins's timeout is higher
-    # then this. Please consult with the build manager or a committer when it should be increased.
-    tests_timeout = "400m"
+    # must be less than the timeout configured on Jenkins (currently 400m)
+    tests_timeout = "600m"
 
     # Array to capture all test names to run on the pull request. These tests are represented
     # by their file equivalents in the dev/tests/ directory.
