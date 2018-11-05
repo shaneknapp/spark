@@ -23,7 +23,7 @@ import sys
 from setuptools import setup, find_packages
 from shutil import copyfile, copytree, rmtree
 
-print("TESTING AGAINST PYTHON: ', sys.version_info)
+print("TESTING AGAINST PYTHON: ", sys.version_info)
 
 if sys.version_info < (2, 7):
     print("Python versions prior to 2.7 are not supported for pip installed PySpark.",
