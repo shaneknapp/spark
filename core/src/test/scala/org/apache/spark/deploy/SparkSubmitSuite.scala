@@ -683,7 +683,7 @@ class SparkSubmitSuite
       "--master", "local",
       "--py-files", pyFiles,
       "--conf", "spark.pyspark.driver.python=python3.5",
-      "--conf", "spark.pyspark.python=python3.5",
+      "--conf", "spark.pyspark.python=python3.6",
       "mister.py"
     )
     val appArgs3 = new SparkSubmitArguments(clArgs3)
@@ -692,7 +692,7 @@ class SparkSubmitSuite
     conf3.get("spark.submit.pyFiles") should be (
       PythonRunner.formatPaths(Utils.resolveURIs(pyFiles)).mkString(","))
     conf3.get(PYSPARK_DRIVER_PYTHON.key) should be ("python3.5")
-    conf3.get(PYSPARK_PYTHON.key) should be ("python3.5")
+    conf3.get(PYSPARK_PYTHON.key) should be ("python3.6")
   }
 
   test("ambiguous archive mapping results in error message") {
