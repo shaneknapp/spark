@@ -702,8 +702,8 @@ class SparkSubmitSuite
       val clArgs3 = Seq(
         "--master", "local",
         "--py-files", pyFiles,
-        "--conf", "spark.pyspark.driver.python=python3.4",
-        "--conf", "spark.pyspark.python=python3.5",
+        "--conf", "spark.pyspark.driver.python=python3.5",
+        "--conf", "spark.pyspark.python=python3.6",
         "mister.py"
       )
       val appArgs3 = new SparkSubmitArguments(clArgs3)
@@ -711,8 +711,8 @@ class SparkSubmitSuite
       appArgs3.pyFiles should be(Utils.resolveURIs(pyFiles))
       conf3.get(SUBMIT_PYTHON_FILES) should be(
         PythonRunner.formatPaths(Utils.resolveURIs(pyFiles)))
-      conf3.get(PYSPARK_DRIVER_PYTHON.key) should be("python3.4")
-      conf3.get(PYSPARK_PYTHON.key) should be("python3.5")
+      conf3.get(PYSPARK_DRIVER_PYTHON.key) should be("python3.5")
+      conf3.get(PYSPARK_PYTHON.key) should be("python3.6")
     }
   }
 
